@@ -1,7 +1,7 @@
 from typing import Tuple
 import streamlit as st
 
-from steps.step import Step
+from ui_steps.step import Step
 
 def show_side_menu( steps: Tuple[Step]) -> tuple:
     menu_item_2_step = [{"menu_item": step.menu_item, "step": step} for step in steps]

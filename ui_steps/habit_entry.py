@@ -1,8 +1,9 @@
 import streamlit as st
 
-from steps.step import Step
+from ui_steps.step import Step
 
 # Create a list of days of the week
+# TODO use weekday class
 days_of_week: tuple = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
 
 class HabitEntry(Step):
@@ -39,3 +40,4 @@ class HabitEntry(Step):
                     st.write("Habit Duration (days):", duration)
                     st.write("Activity Time:", f"{hours:02d}:{minutes:02d}")
                     st.write("Frequency:", selected_days)
+                # TODO call the presenter to save habit model to DB

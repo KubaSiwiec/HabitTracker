@@ -1,8 +1,8 @@
 import streamlit as st
 
 from  pipeline import Pipeline
-from steps.habit_entry import HabitEntry
-from steps.habit_dashboard import HabitDashboard
+from ui_steps.habit_entry import HabitEntry
+from ui_steps.habit_dashboard import HabitDashboard
 
 # Create a Streamlit app
 st.title("Habit Tracker App")

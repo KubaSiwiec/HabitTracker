@@ -1,6 +1,6 @@
 import streamlit as st
 
-from steps.step import Step
+from ui_steps.step import Step
 
 class HabitDashboard(Step):
 

@@ -1,7 +1,7 @@
 from typing import Any, Dict, List, Tuple
 
 from menu import show_side_menu
-from steps.step import Step
+from ui_steps.step import Step
 
 class Pipeline:
     def __init__(self, steps: Tuple[Step]) -> None:
