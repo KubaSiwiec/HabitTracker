@@ -8,10 +8,6 @@ from models.habit_model import HabitModel
 days_of_week: tuple = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
 
 class HabitEntry(HabitStep):
-    def __init__(self, menu_item: str):
-        super().__init__(menu_item)
-        # not adding to parent class as in future steps might use 
-        self.habit_service = HabitService
 
     def show(self):
         # Habit Entry View
