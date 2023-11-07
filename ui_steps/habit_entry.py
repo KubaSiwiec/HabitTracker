@@ -35,6 +35,10 @@ class HabitEntry(HabitStep):
             if conditions_met:
                 st.error("Please ensure you've selected at least one day and set a non-zero time for the activity.")
             elif st.button("Save Habit"):
+                habit_model = HabitModel(habit, number_of_days=duration, daily_hours=hours, daily_minutes=minutes, weekdays=selected_days)
+                habit_json = habit_model.as_dict()
+                habit_id = self.habit_service.insert_habit(habit_json)
+                print(f"Inserted habit with ID: {habit_id}")
                 with st.expander("Habit inserted to dashboard"):
                     # Process and store the habit details
                     st.write("Habit Name:", habit)

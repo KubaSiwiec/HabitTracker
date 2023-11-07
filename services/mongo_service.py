@@ -15,4 +15,4 @@ class HabitService(MongoService):
 
     def insert_habit(self, habit: dict):
         post_id = self.habits_collection.insert_one(habit).inserted_id
-        print(post_id)
+        return post_id
