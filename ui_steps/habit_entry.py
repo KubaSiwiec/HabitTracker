@@ -1,12 +1,17 @@
 import streamlit as st
 
-from ui_steps.step import Step
+from ui_steps.step import HabitStep
+from models.habit_model import HabitModel
 
 # Create a list of days of the week
 # TODO use weekday class
 days_of_week: tuple = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
 
-class HabitEntry(Step):
+class HabitEntry(HabitStep):
+    def __init__(self, menu_item: str):
+        super().__init__(menu_item)
+        # not adding to parent class as in future steps might use 
+        self.habit_service = HabitService
 
     def show(self):
         # Habit Entry View

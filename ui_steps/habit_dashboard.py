@@ -1,8 +1,8 @@
 import streamlit as st
 
-from ui_steps.step import Step
+from ui_steps.step import HabitStep
 
-class HabitDashboard(Step):
+class HabitDashboard(HabitStep):
 
     def show(self):
         st.header("Habit Dashboard")
