@@ -2,6 +2,7 @@ from dataclasses import dataclass, asdict
 
 from models.weekday import Weekday
 
+# TODO add user when login and user management ready
 @dataclass
 class HabitModel:
     name: str
